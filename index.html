@@ -1,0 +1,128 @@
+<html>
+
+<h2>Occidental Verbal Derivation</h2>
+<p>See <a href="https://en.wikipedia.org/wiki/De_Wahl%27s_rule">here</a> and <a href="https://occidental-lang.com/grammatica/#/10-Verb?id=verbal-derivation">here</a> for more info.</p>
+
+<p>Enter Occidental infinitive: <input id="verb" onchange="dewahlify(this)"></p>
+
+<div id="result"></div>
+
+<script>
+
+function dewahlify(word) {
+  
+  var type = getType(word.value);
+  
+	var presentRoot = getPresentRoot(word.value);
+  var verbalRoot = getVerbalRoot(word.value);
+  var perfectRoot = getPerfectRoot(word.value, type);
+  
+  var derivatives = getDerivatives(perfectRoot, presentRoot, verbalRoot, type);
+  
+  var result = `Infinitive: ${word.value}\nType: ${type}\nDerivatives:\n - ${derivatives.join("\n - ")}`;
+  
+  document.getElementById("result").innerText = result;
+  
+}
+
+function isVowel(x) { 
+  return ("aeiouAEIOU".indexOf(x) != -1); 
+}
+
+function getPresentRoot(infinitive) { 
+  return infinitive.split("").slice(0, -1).join("");
+}
+
+function getVerbalRoot(infinitive) {
+	return infinitive.split("").slice(0, -2).join("");
+}
+
+function getPerfectRoot(infinitive, type) {
+	
+  // irregulars
+  switch (infinitive) {
+    case 'ceder':
+      return "cess"
+    case 'seder':
+      return "sess"
+    case 'mover':
+      return "mot"
+    case 'tener':
+      return "tent"
+    case 'verter':
+      return "vers"
+    case 'venir':
+      return "vent"
+    default:
+      break;
+  }
+
+  var rootLetters = [];
+  if (type == 'er') {
+    rootLetters = infinitive.split("").slice(0, -2);
+    if (rootLetters[rootLetters.length - 1] == "d" || rootLetters[rootLetters.length - 1] == "r") {
+    	rootLetters[rootLetters.length - 1] = "s";
+    } else if (isVowel(rootLetters[rootLetters.length - 1])) {
+    	rootLetters.push("t");
+    }
+  } else if (type == 'ir' || type == 'ar') {
+  	rootLetters = infinitive.split("").slice(0, -1);
+    rootLetters.push("t");
+  }
+  return rootLetters.join("");
+}
+
+function getType(infinitive) {
+    return infinitive.split("").slice(-2).join("");
+}
+
+function getDerivatives(perfectRoot, presentRoot, verbalRoot, type) {
+
+	var derivatives = [
+  	//"noun or adjective: li " + perfectRoot,
+    //"adjective: " + perfectRoot,
+    "noun: li " + verbalRoot + "e (general ending, without special meaning)",
+    //"noun: li " + verbalRoot + "a ( indicating activity, location or time, something prolonged, universal, collective, and with living things the feminine)", 
+    //"noun: li " + verbalRoot + "o (indicate something concrete, material, special, individual, and with living entities the masculine)",
+    //"noun: li " + verbalRoot + "u (indicates something abstract, neuter, a relativity, or is used to receive international derivatives.)",
+  	perfectRoot + "ion (action, also result and location of it)",
+  	perfectRoot + "or (acting person, thing or factor)",
+    perfectRoot + "ori (destined toward, should act as (adjective of -or))",
+    perfectRoot + "iv",
+    perfectRoot + "ura (concrete action or its result)",
+    type == "ir" ? presentRoot + "entie (continuing state)" : presentRoot + "ntie (continuing state)",
+    type == "ir" ? presentRoot + "end (to do)" : presentRoot + "nd (to do)",
+    verbalRoot + "age (activity, mainly industrial or professional, also its result, location or time, also its expenses)",
+    verbalRoot + "achar",
+  	verbalRoot + "era",
+    verbalRoot + "ard (people with a bad quality)",
+    verbalRoot + "on (person characterized by an internal or natural quality)",
+    verbalRoot + "ore",
+    verbalRoot + "uore (location utensil)",
+    verbalRoot + "age",
+    verbalRoot + "aci",
+    verbalRoot + "isar (act in a manner / as)",
+    verbalRoot + "ificar (act in a manner. also forms adjectives:: pacific, magnific, specific)",
+    verbalRoot + "ijar (become, make oneself)",
+    verbalRoot + "ear (dynamic state of coming and going)"
+  ];
+  
+  if (type == "er" && isVowel(verbalRoot.split("").slice(-1))) {
+  	derivatives.push(verbalRoot + "ment (concrete action or its result, or serving to / serving as)")
+  } else {
+  	derivatives.push(presentRoot + "ment (concrete action or its result, or serving to / serving as)")
+  }
+  
+  if (type == "ar") {
+  	derivatives.push(verbalRoot + "abil (of transitive verbs: what one can do, of intransitive verbs: what can do)", verbalRoot + "ada (continuing action)");
+  } else {
+  	derivatives.push(verbalRoot + "ibil (of transitive verbs: what one can do, of intransitive verbs: what can do)", verbalRoot + "ida (continuing action)");
+  }
+  
+  return derivatives
+}
+
+</script>
+
+
+</html>
