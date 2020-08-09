@@ -3,21 +3,26 @@
 <h2>Occidental Verbal Derivation</h2>
 <p>See <a href="https://en.wikipedia.org/wiki/De_Wahl%27s_rule">here</a> and <a href="https://occidental-lang.com/grammatica/#/10-Verb?id=verbal-derivation">here</a> for more info.</p>
 
-<p>Enter Occidental infinitive: <input id="verb" onchange="dewahlify(this)"></p>
+<p>Enter Occidental infinitive: <input id="verb" type="search" onchange="dewahlify(this)"></p>
 
 <div id="result"></div>
 
 <script>
 
+if (window.location.search != "") {
+  document.getElementById('verb').value = window.location.search.slice(1);
+  var e = new Event('change');
+  document.getElementById('verb').dispatchEvent(e);
+}
+
 function dewahlify(word) {
   
   var type = getType(word.value);
-  
-	var presentRoot = getPresentRoot(word.value);
+	var presentTheme = getPresentTheme(word.value);
   var verbalRoot = getVerbalRoot(word.value);
-  var perfectRoot = getPerfectRoot(word.value, type);
+  var perfectTheme = getPerfectTheme(word.value, type);
   
-  var derivatives = getDerivatives(perfectRoot, presentRoot, verbalRoot, type);
+  var derivatives = getDerivatives(perfectTheme, presentTheme, verbalRoot, type);
   
   var result = `Infinitive: ${word.value}\nType: ${type}\nDerivatives:\n - ${derivatives.join("\n - ")}`;
   
@@ -29,7 +34,7 @@ function isVowel(x) {
   return ("aeiouAEIOU".indexOf(x) != -1); 
 }
 
-function getPresentRoot(infinitive) { 
+function getPresentTheme(infinitive) { 
   return infinitive.split("").slice(0, -1).join("");
 }
 
@@ -37,7 +42,7 @@ function getVerbalRoot(infinitive) {
 	return infinitive.split("").slice(0, -2).join("");
 }
 
-function getPerfectRoot(infinitive, type) {
+function getPerfectTheme(infinitive, type) {
 	
   // irregulars
   switch (infinitive) {
@@ -76,22 +81,22 @@ function getType(infinitive) {
     return infinitive.split("").slice(-2).join("");
 }
 
-function getDerivatives(perfectRoot, presentRoot, verbalRoot, type) {
+function getDerivatives(perfectTheme, presentTheme, verbalRoot, type) {
 
 	var derivatives = [
-  	//"noun or adjective: li " + perfectRoot,
-    //"adjective: " + perfectRoot,
+  	//"noun or adjective: li " + perfectTheme,
+    //"adjective: " + perfectTheme,
     "noun: li " + verbalRoot + "e (general ending, without special meaning)",
     //"noun: li " + verbalRoot + "a ( indicating activity, location or time, something prolonged, universal, collective, and with living things the feminine)", 
     //"noun: li " + verbalRoot + "o (indicate something concrete, material, special, individual, and with living entities the masculine)",
     //"noun: li " + verbalRoot + "u (indicates something abstract, neuter, a relativity, or is used to receive international derivatives.)",
-  	perfectRoot + "ion (action, also result and location of it)",
-  	perfectRoot + "or (acting person, thing or factor)",
-    perfectRoot + "ori (destined toward, should act as (adjective of -or))",
-    perfectRoot + "iv",
-    perfectRoot + "ura (concrete action or its result)",
-    type == "ir" ? presentRoot + "entie (continuing state)" : presentRoot + "ntie (continuing state)",
-    type == "ir" ? presentRoot + "end (to do)" : presentRoot + "nd (to do)",
+  	perfectTheme + "ion (action, also result and location of it)",
+  	perfectTheme + "or (acting person, thing or factor)",
+    perfectTheme + "ori (destined toward, should act as (adjective of -or))",
+    perfectTheme + "iv",
+    perfectTheme + "ura (concrete action or its result)",
+    type == "ir" ? presentTheme + "entie (continuing state)" : presentTheme + "ntie (continuing state)",
+    type == "ir" ? presentTheme + "end (to do)" : presentTheme + "nd (to do)",
     verbalRoot + "age (activity, mainly industrial or professional, also its result, location or time, also its expenses)",
     verbalRoot + "achar",
   	verbalRoot + "era",
@@ -110,7 +115,7 @@ function getDerivatives(perfectRoot, presentRoot, verbalRoot, type) {
   if (type == "er" && isVowel(verbalRoot.split("").slice(-1))) {
   	derivatives.push(verbalRoot + "ment (concrete action or its result, or serving to / serving as)")
   } else {
-  	derivatives.push(presentRoot + "ment (concrete action or its result, or serving to / serving as)")
+  	derivatives.push(presentTheme + "ment (concrete action or its result, or serving to / serving as)")
   }
   
   if (type == "ar") {
