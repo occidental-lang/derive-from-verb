@@ -303,7 +303,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "derivative": verbalRoot + "ment",
         "derivative type": "noun",
         "explanation": "concrete action or its result, or serving to / serving as",
-        "example": "",
+        "example": "guvernament",
         })
     } else {
         derivatives.push({
