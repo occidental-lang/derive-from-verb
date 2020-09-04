@@ -57,6 +57,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "perfect theme",
         "formula": "li + perfect theme + e",
         "derivative": "li " + perfectTheme + "e",
+        "derivative type": "noun or adjective",
         "explanation": "noun or adjective",
         "example": "li response"
         },
@@ -65,6 +66,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "perfect theme",
         "formula": "perfect theme + ion" ,
         "derivative": perfectTheme + "ion",
+        "derivative type": "noun",
         "explanation": "action, also result and location of it",
         "example": "colaboration"
         },
@@ -73,6 +75,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "perfect theme",
         "formula": "perfect theme + or" ,
         "derivative": perfectTheme + "or",
+        "derivative type": "noun",
         "explanation": "acting person, thing or factor",
         "example": "administrator"
         },
@@ -81,6 +84,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "perfect theme",
         "formula": "perfect theme + ori" ,
         "derivative": perfectTheme + "ori",
+        "derivative type": "adjective",
         "explanation": "destined toward, should act as (adjective of -or)",
         "example": "administratori"
         },
@@ -89,6 +93,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "perfect theme",
         "formula": "perfect theme + iv" ,
         "derivative": perfectTheme + "iv",
+        "derivative type": "adjective",
         "explanation": "acting as such, capable of",
         "example": "administrativ"
         },
@@ -97,6 +102,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "perfect theme",
         "formula": "perfect theme + ura" ,
         "derivative": perfectTheme + "ura",
+        "derivative type": "noun",
         "explanation": "concrete action or its result",
         "example": "scritura"
         },
@@ -105,6 +111,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "verbal root",
         "formula": "verbal root + age" ,
         "derivative": verbalRoot + "age",
+        "derivative type": "noun",
         "explanation": "activity, mainly industrial or professional, also its result, location or time, also its expenses",
         "example": "viage, espionage, portage"
         },
@@ -113,6 +120,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "verbal root",
         "formula": "verbal root + achar" ,
         "derivative": verbalRoot + "achar",
+        "derivative type": "verb",
         "explanation": "verb with negative, pejorative meaning",
         "example": "plorachar"
         },
@@ -121,6 +129,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "verbal root",
         "formula": "verbal root + era" ,
         "derivative": verbalRoot + "era",
+        "derivative type": "",
         "explanation": "",
         "example": ""
         },
@@ -129,6 +138,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "verbal root",
         "formula": "verbal root + ard" ,
         "derivative": verbalRoot + "ard",
+        "derivative type": "noun",
         "explanation": "people with a bad quality",
         "example": "mentard"
         },
@@ -137,6 +147,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "verbal root",
         "formula": "verbal root + on" ,
         "derivative": verbalRoot + "on",
+        "derivative type": "noun",
         "explanation": "person characterized by an internal or natural quality",
         "example": "novon"
         },
@@ -145,6 +156,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "verbal root",
         "formula": "verbal root + ore" ,
         "derivative": verbalRoot + "ore",
+        "derivative type": "noun",
         "explanation": "status or measurable quality",
         "example": "calore"
         },
@@ -153,6 +165,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "verbal root",
         "formula": "verbal root + uore" ,
         "derivative": verbalRoot + "uore",
+        "derivative type": "noun",
         "explanation": "location or utensil",
         "example": "reservuore"
         },
@@ -161,6 +174,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "verbal root",
         "formula": "verbal root + aci" ,
         "derivative": verbalRoot + "aci",
+        "derivative type": "adjective",
         "explanation": "tending towards something",
         "example": "tending towards something"
         },
@@ -169,6 +183,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "verbal root",
         "formula": "verbal root + isar" ,
         "derivative": verbalRoot + "isar",
+        "derivative type": "verb",
         "explanation": "act in a manner / as",
         "example": "terrorisar"
         },
@@ -177,6 +192,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "verbal root",
         "formula": "verbal root + ificar" ,
         "derivative": verbalRoot + "ificar",
+        "derivative type": "verb",
         "explanation": "act in a manner. also forms adjectives:: pacific, magnific, specific",
         "example": "verificar"
         },
@@ -185,6 +201,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "verbal root",
         "formula": "verbal root + ear" ,
         "derivative": verbalRoot + "ear",
+        "derivative type": "verb",
         "explanation": "dynamic state of coming and going",
         "example": "flammear"
         }
@@ -197,6 +214,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "verbal root",
         "formula": "li verbal root + a",
         "derivative": "li " + verbalRoot + "a",
+        "derivative type": "noun",
         "explanation": "noun (indicating activity, location or time)",
         "example": "li pensa"
         })
@@ -206,6 +224,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "verbal root",
         "formula": "li verbal root + e",
         "derivative": "li " + verbalRoot + "e",
+        "derivative type": "noun",
         "explanation": "noun (general ending)",
         "example": "li pense"
     })
@@ -216,6 +235,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "present theme",
         "formula": "present theme + entie",
         "derivative": presentTheme + "entie",
+        "derivative type": "noun",
         "explanation": "continuing state",
         "example": "tolerantie",
         })
@@ -225,6 +245,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "present theme",
         "formula": "present theme + ntie",
         "derivative": presentTheme + "ntie",
+        "derivative type": "noun",
         "explanation": "continuing state",
         "example": "tolerantie"
         })
@@ -236,6 +257,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "present theme",
         "formula": "present theme + ente/o/a",
         "derivative": presentTheme + "ente/o/a",
+        "derivative type": "noun",
         "explanation": "doer of the verb",
         "example": "consonante",
         })
@@ -245,6 +267,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "present theme",
         "formula": "present theme + nte/o/a",
         "derivative": presentTheme + "nte/o/a",
+        "derivative type": "noun",
         "explanation": "doer of the verb",
         "example": "consonante"
         })
@@ -256,6 +279,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "present theme",
         "formula": "present theme + end",
         "derivative": presentTheme + "end",
+        "derivative type": "noun",
         "explanation": "to do",
         "example": "multiplicand",
         })
@@ -265,6 +289,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "present theme",
         "formula": "present theme + nd",
         "derivative": presentTheme + "nd",
+        "derivative type": "noun",
         "explanation": "to do",
         "example": "multiplicand"
         })
@@ -276,6 +301,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "verbal root",
         "formula": "verbal root + ment",
         "derivative": verbalRoot + "ment",
+        "derivative type": "noun",
         "explanation": "concrete action or its result, or serving to / serving as",
         "example": "",
         })
@@ -285,6 +311,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "present theme",
         "formula": "present theme + ment",
         "derivative": presentTheme + "ment",
+        "derivative type": "noun",
         "explanation": "concrete action or its result, or serving to / serving as",
         "example": "",
         })
@@ -296,6 +323,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "verbal root",
         "formula": "verbal root + abil",
         "derivative": verbalRoot + "abil",
+        "derivative type": "adjective",
         "explanation": "of transitive verbs: what one can do, of intransitive verbs: what can do",
         "example": "",
         },{
@@ -303,6 +331,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "verbal root",
         "formula": "verbal root + ada",
         "derivative": verbalRoot + "ada",
+        "derivative type": "noun",
         "explanation": "continuing action",
         "example": "",
         })
@@ -312,6 +341,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "verbal root",
         "formula": "verbal root + ibil",
         "derivative": verbalRoot + "ibil",
+        "derivative type": "adjective",
         "explanation": "of transitive verbs: what one can do, of intransitive verbs: what can do",
         "example": "",
         },{
@@ -319,6 +349,7 @@ function getDerivatives(infinitive, perfectTheme, presentTheme, verbalRoot, type
         "form used": "verbal root",
         "formula": "verbal root + ida",
         "derivative": verbalRoot + "ida",
+        "derivative type": "noun",
         "explanation": "continuing action",
         "example": "",
         })
