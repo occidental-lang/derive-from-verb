@@ -85,8 +85,11 @@
 
       document.getElementById("result").innerHTML = result;
       $('#derivationTable').DataTable({
-        "paging": false,
-        "scrollX": true
+        paging: false,
+        scrollX: true,
+        fixedHeader: {
+          header: false,
+        }
       });
 
     }
