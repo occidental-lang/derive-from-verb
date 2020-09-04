@@ -59,6 +59,8 @@
         <table id="derivationTable" class="table table-bordered table-hover">
           <thead class="thead-dark">
             <tr>
+              <th scope="col">Input Type</th>
+              <th scope="col">Derivative Type</th>
               <th scope="col">Formula</th>
               <th scope="col">Derivative</th>
               <th scope="col">Explanation</th>
@@ -69,6 +71,8 @@
       for(let d of derivatives){
         result += `
         <tr>
+          <td>${d.inputType}</td>
+          <td>${d.derivativeType}</td>
           <td>${d.formula}</td>
           <td><b>${d.derivative}</b></td>
           <td>${d.explanation}</td>
@@ -80,7 +84,10 @@
       result += `</tbody></table></div>`;
 
       document.getElementById("result").innerHTML = result;
-      $('#derivationTable').DataTable();
+      $('#derivationTable').DataTable({
+        "paging": false,
+        "scrollX": true
+      });
 
     }
   </script>
