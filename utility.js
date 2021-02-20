@@ -16,6 +16,9 @@ function getPerfectTheme(infinitive, type) {
     switch (infinitive) {
         case 'ceder':
         return "cess"
+        // "creder" is a very unique word
+        case 'creder':
+        return "cred"
         case 'seder':
         return "sess"
         case 'mover':
