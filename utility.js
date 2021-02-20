@@ -33,8 +33,10 @@ function getPerfectTheme(infinitive, type) {
     var rootLetters = [];
     if (type == 'er') {
         rootLetters = infinitive.split("").slice(0, -2);
-        if (rootLetters[rootLetters.length - 1] == "d" || rootLetters[rootLetters.length - 1] == "r") {
+        if (rootLetters[rootLetters.length - 1] == "d") {
             rootLetters[rootLetters.length - 1] = "s";
+        } else if (rootLetters[rootLetters.length - 1] == "r") { 
+            rootLetters[rootLetters.length - 1] = "s";   
         } else if (isVowel(rootLetters[rootLetters.length - 1])) {
             rootLetters.push("t");
         }
