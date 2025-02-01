@@ -63,6 +63,8 @@ function getPerfectTheme(infinitive, type) {
     } else if (rootLetters[-1] === 'g') {
         rootLetters[-1] = 'c';
         rootLetters.push('t');
+    } else {
+        rootLetters.push('t');
     }
 
     return rootLetters.join("");
