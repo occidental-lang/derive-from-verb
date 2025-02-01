@@ -11,62 +11,41 @@ function getVerbalRoot(infinitive) {
 }
 
 function getPerfectTheme(infinitive, type) {
-    
     // irregulars
     switch (infinitive) {
-        case 'ceder':
-        return "cess"
-        case 'seder':
-        return "sess"
-        case 'mover':
-        return "mot"
-        case 'currer':
-        return "curs"
-        case 'verter':
-        return "vers"
-        case 'venir':
-        return "vent"
-        case 'herer':
-        return "hes"
-        case 'opiner':
-        return "opin"
-        case 'rebeller':
-        return "rebell"
-        case 'graver':
-        return "grav"
-        case 'nocer':
-        return "noc"
-        case 'morir':
-        return "mort"
-        case 'nascer':
-        return "nat"
-        case 'sentir':
-        return "sens"
-        default:
-        break;
+        case 'ceder': return "cess";
+        case 'seder': return "sess";
+        case 'mover': return "mot";
+        case 'currer': return "curs";
+        case 'verter': return "vers";
+        case 'venir': return "vent";
+        case 'herer': return "hes";
+        case 'opiner': return "opin";
+        case 'rebeller': return "rebell";
+        case 'graver': return "grav";
+        case 'nocer': return "noc";
+        case 'morir': return "mort";
+        case 'nascer': return "nat";
+        case 'sentir': return "sens";
+        default: break;
     }
 
-    var rootLetters = [];
-    if (type == 'er') {
-        rootLetters = infinitive.split("").slice(0, -2);
-    } else {
-        rootLetters = infinitive.split("").slice(0, -1);
-    }
+    let rootLetters = type === 'er' 
+        ? infinitive.slice(0, -2).split("") 
+        : infinitive.slice(0, -1).split("");
 
-    if (['s', 't', 'x'].includes(rootLetters[-1])) {
+    let lastIndex = rootLetters.length - 1;
+
+    if (['s', 't', 'x'].includes(rootLetters[lastIndex])) {
         return rootLetters.join("");
-    } else if (rootLetters[-1] === 'd') {
-        rootLetters[-1] = 's';
-        console.log(rootLetters)
-        return rootLetters.join("");
-    } else if (rootLetters[-1] === 'b') {
-        rootLetters[-1] = 'p';
+    } else if (rootLetters[lastIndex] === 'd') {
+        rootLetters[lastIndex] = 's';
+    } else if (rootLetters[lastIndex] === 'b') {
+        rootLetters[lastIndex] = 'p';
         rootLetters.push('t');
-        return rootLetters.join("");
-    } else if (rootLetters[-1] === 'g') {
-        rootLetters[-1] = 'c';
+    } else if (rootLetters[lastIndex] === 'g') {
+        rootLetters[lastIndex] = 'c';
         rootLetters.push('t');
-        return rootLetters.join("");
     } else {
         rootLetters.push('t');
     }
