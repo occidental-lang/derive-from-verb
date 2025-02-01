@@ -57,6 +57,7 @@ function getPerfectTheme(infinitive, type) {
         return rootLetters.join("");
     } else if (rootLetters[-1] === 'd') {
         rootLetters[-1] = 's';
+        console.log(rootLetters)
         return rootLetters.join("");
     } else if (rootLetters[-1] === 'b') {
         rootLetters[-1] = 'p';
