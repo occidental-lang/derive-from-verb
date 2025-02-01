@@ -57,12 +57,15 @@ function getPerfectTheme(infinitive, type) {
         return rootLetters.join("");
     } else if (rootLetters[-1] === 'd') {
         rootLetters[-1] = 's';
+        return rootLetters.join("");
     } else if (rootLetters[-1] === 'b') {
         rootLetters[-1] = 'p';
         rootLetters.push('t');
+        return rootLetters.join("");
     } else if (rootLetters[-1] === 'g') {
         rootLetters[-1] = 'c';
         rootLetters.push('t');
+        return rootLetters.join("");
     } else {
         rootLetters.push('t');
     }
