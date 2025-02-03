@@ -14,11 +14,8 @@ function getPerfectTheme(infinitive, type) {
     // irregulars
     switch (infinitive) {
         case 'ceder': return "cess";
-        case 'seder': return "sess";
-        case 'mover': return "mot";
         case 'currer': return "curs";
-        case 'verter': return "vers";
-        case 'venir': return "vent";
+        case 'mover': return "mot";
         case 'herer': return "hes";
         case 'opiner': return "opin";
         case 'rebeller': return "rebell";
@@ -26,7 +23,10 @@ function getPerfectTheme(infinitive, type) {
         case 'nocer': return "noc";
         case 'morir': return "mort";
         case 'nascer': return "nat";
+        case 'seder': return "sess";
         case 'sentir': return "sens";
+        case 'venir': return "vent";
+        case 'verter': return "vers";
         default: break;
     }
 

@@ -14,21 +14,16 @@ function getPerfectTheme(infinitive, type) {
     
     // irregulars
     switch (infinitive) {
-        case 'ceder':
-        return "cess"
-        // "creder" is a very unique word
-        case 'creder':
-        return "cred"
-        case 'seder':
-        return "sess"
-        case 'mover':
-        return "mot"
-        case 'tener':
-        return "tent"
-        case 'verter':
-        return "vers"
-        case 'venir':
-        return "vent"
+        case 'ceder': return "cess";
+        case 'creder': return "cred";
+        case 'morir': return "mort";
+        case 'mover': return "mot";
+        case 'nascer': return "nat";
+        case 'seder': return "sess";
+        case 'sentir': return "sens";
+        case 'tener': return "tent";
+        case 'venir': return "vent";
+        case 'verter': return "vers";
         default:
         break;
     }
