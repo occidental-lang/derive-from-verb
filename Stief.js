@@ -22,7 +22,6 @@ function getPerfectTheme(infinitive, type) {
         case 'graver': return "grav";
         case 'nocer': return "noc";
         case 'morir': return "mort";
-        case 'nascer': return "nat";
         case 'seder': return "sess";
         case 'sentir': return "sens";
         case 'venir': return "vent";
@@ -45,6 +44,9 @@ function getPerfectTheme(infinitive, type) {
         rootLetters.push('t');
     } else if (rootLetters[lastIndex] === 'g') {
         rootLetters[lastIndex] = 'c';
+        rootLetters.push('t');
+    } else if (rootLetters.slice(-2).join("") === 'sc') {
+        rootLetters.splice(lastIndex - 1, 2);
         rootLetters.push('t');
     } else {
         rootLetters.push('t');
