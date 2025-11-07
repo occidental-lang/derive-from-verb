@@ -45,9 +45,6 @@ function getPerfectTheme(infinitive, type) {
     } else if (rootLetters[lastIndex] === 'g') {
         rootLetters[lastIndex] = 'c';
         rootLetters.push('t');
-    } else if (rootLetters.slice(-2).join("") === 'sc') {
-        rootLetters.splice(lastIndex - 1, 2);
-        rootLetters.push('t');
     } else {
         rootLetters.push('t');
     }
